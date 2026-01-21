@@ -1,35 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmv6rekpge1kj"]
+[gd_scene load_steps=6 format=3 uid="uid://dmv6rekpge1kj"]
 
 [ext_resource type="PackedScene" uid="uid://gxtuca68v2ea" path="res://player.tscn" id="1_glv2v"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_uu6xs"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(76.000015, 4.10001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu6xs"]
+size = Vector2(114.5, 4.2000046)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0du0"]
-size = Vector2(114.400024, 4.1000013)
+size = Vector2(114.5, 4.200001)
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_glv2v")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(550, 500)
+position = Vector2(550, 400)
 scale = Vector2(10, 10)
-metadata/_edit_group_ = true
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
-position = Vector2(2.5999947, 12.049998)
-scale = Vector2(114.4, 4.1)
+position = Vector2(2.0000029, 12.049998)
+scale = Vector2(76, 4.1)
 mesh = SubResource("BoxMesh_uu6xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2.6000023, 12.049999)
+position = Vector2(2, 12.050007)
 scale = Vector2(0.99999976, 0.99999976)
-shape = SubResource("RectangleShape2D_r0du0")
+shape = SubResource("RectangleShape2D_glv2v")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(250, 470)
+position = Vector2(350, 350)
 scale = Vector2(2, 5)
-metadata/_edit_group_ = true
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2"]
 position = Vector2(2.5999947, 12.049998)
@@ -37,14 +41,12 @@ scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_uu6xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(2.6000023, 12.049999)
-scale = Vector2(0.99999976, 0.99999976)
-shape = SubResource("RectangleShape2D_r0du0")
+position = Vector2(2.75, 12.099998)
+shape = SubResource("RectangleShape2D_uu6xs")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(850, 470)
+position = Vector2(750, 350)
 scale = Vector2(2, 5)
-metadata/_edit_group_ = true
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3"]
 position = Vector2(2.5999947, 12.049998)
@@ -52,6 +54,5 @@ scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_uu6xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(2.6000023, 12.049999)
-scale = Vector2(0.99999976, 0.99999976)
+position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_r0du0")

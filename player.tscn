@@ -5,8 +5,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
-radius = 6.0
-height = 24.0
+height = 40.0
 
 [node name="Player" type="Node"]
 
@@ -15,7 +14,7 @@ position = Vector2(550, 0)
 script = ExtResource("1_4flbx")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
-scale = Vector2(12, 12)
+scale = Vector2(20, 20)
 mesh = SubResource("CapsuleMesh_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
