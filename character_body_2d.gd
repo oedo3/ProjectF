@@ -1,14 +1,15 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -450.0
+const SPEED = 700.0
+const JUMP_VELOCITY = -700.0
 const JUMP_BUFFER_TIME := 0.15
 
-const DASH_SPEED := 900.0
+const DASH_SPEED := 1800.0
 const DASH_TIME := 0.12
 const DASH_COOLDOWN := 0.4
 
+var weight := 1.2
 var jump_buffer := 0.0
 var is_dashing := false
 var dash_timer := 0.0
@@ -42,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		# Gravity
 		if not is_on_floor():
-			velocity += get_gravity() * delta
+			velocity += get_gravity() * delta * weight
 
 		# Jump buffer input
 		if Input.is_action_just_pressed("up"):
@@ -57,7 +58,7 @@ func _physics_process(delta: float) -> void:
 
 		# Fast fall
 		if Input.is_action_just_pressed("down"):
-			velocity.y = JUMP_VELOCITY * -0.7
+			velocity.y = JUMP_VELOCITY * -1
 
 		# Horizontal movement
 		var direction := Input.get_axis("left", "right")

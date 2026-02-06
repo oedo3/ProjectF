@@ -1,26 +1,64 @@
-[gd_scene load_steps=4 format=3 uid="uid://gxtuca68v2ea"]
+[gd_scene load_steps=9 format=3 uid="uid://gxtuca68v2ea"]
 
 [ext_resource type="Script" uid="uid://deat4y62v5nwp" path="res://character_body_2d.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://6safu1cis0lx" path="res://camera_2d.gd" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://d05dyq077to4v" path="res://fast_fall_indicator.gd" id="3_i3pqv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
-height = 40.0
+radius = 32.0
+height = 128.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_onrkg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hqtel"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_onrkg"]
 
 [node name="Player" type="Node"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(550, 0)
 script = ExtResource("1_4flbx")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
-scale = Vector2(20, 20)
+scale = Vector2(64, 64)
 mesh = SubResource("CapsuleMesh_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_i3pqv")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+offset = Vector2(0, -100)
+zoom = Vector2(0.8, 0.8)
+script = ExtResource("2_onrkg")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_onrkg")
+animation = &"idle"
+
+[node name="FastFallIndicator" type="MeshInstance2D" parent="CharacterBody2D"]
+position = Vector2(-45, -56)
+scale = Vector2(20, 20)
+mesh = SubResource("SphereMesh_hqtel")
+script = ExtResource("3_i3pqv")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="CharacterBody2D"]
 position = Vector2(550, 0)
+occluder = SubResource("OccluderPolygon2D_onrkg")
