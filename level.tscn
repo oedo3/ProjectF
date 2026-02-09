@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://jwpvb7ri6gf8"]
+[gd_scene format=4 uid="uid://jwpvb7ri6gf8"]
 
 [ext_resource type="Script" uid="uid://fra76ncdm3wh" path="res://level.gd" id="1_vonw3"]
 [ext_resource type="Texture2D" uid="uid://dx0kcp7t8eok7" path="res://data/tiles.webp" id="2_0b4ue"]
@@ -55,236 +55,230 @@ size = Vector2(114.5, 4.200001)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
 size = Vector2(200, 0.9999976)
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=2011586503]
 script = ExtResource("1_vonw3")
 
-[node name="PixelForest2" type="Sprite2D" parent="."]
+[node name="PixelForest2" type="Sprite2D" parent="." unique_id=540008813]
 visible = false
 position = Vector2(1293, 1355)
 texture = ExtResource("2_oi3di")
 
-[node name="PixelForest" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(41, -126.000015)
-scale = Vector2(0.109786175, 0.1433616)
-texture = ExtResource("2_oi3di")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1698379599]
 material = SubResource("CanvasItemMaterial_0b4ue")
 tile_map_data = PackedByteArray("AAAAAP//AgAAAAAAAAABAP//AgAAAAAAAAACAP//AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AgAAAAAAAAAJAP//AgAAAAAAAAAKAP//AgAAAAAAAAALAP//AgAAAAAAAAAMAP//AgAAAAAAAAANAP//AgAAAAAAAAAOAP//AgAAAAAAAAA=")
 tile_set = SubResource("TileSet_n6hdu")
 rendering_quadrant_size = 32
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1617570358]
 position = Vector2(0, 400)
 scale = Vector2(10, 10)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1358798927]
 position = Vector2(81.649994, 12.049998)
 scale = Vector2(235.29999, 4.1)
 mesh = SubResource("BoxMesh_oi3di")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=343909195]
 position = Vector2(81.64999, 12.050007)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_0b4ue")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1070961254]
 position = Vector2(0, 800)
 scale = Vector2(10, 10)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4" unique_id=1636270212]
 position = Vector2(81.649994, 12.049998)
 scale = Vector2(235.29999, 4.1)
 mesh = SubResource("BoxMesh_oi3di")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1668044594]
 position = Vector2(81.64999, 12.050007)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_0b4ue")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=246798893]
 position = Vector2(-700, 600)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2" unique_id=913000896]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_f2txt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=985341715]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D2"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D2" unique_id=1374393611]
 position = Vector2(1494, 37.800003)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D2"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D2" unique_id=832975942]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_f2txt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D2" unique_id=478335997]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D2"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D2" unique_id=482223977]
 position = Vector2(1694, 137.79999)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D3"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D3" unique_id=1385496214]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D3" unique_id=489682798]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D2/StaticBody2D3"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D2/StaticBody2D3" unique_id=570304854]
 position = Vector2(-534.5, 631.52)
 rotation = 0.01271501
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D2"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D2" unique_id=1216177362]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_f2txt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D2" unique_id=614078795]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D2/StaticBody2D3"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D2/StaticBody2D3" unique_id=1283814588]
 position = Vector2(-334.5, 731.52)
 rotation = 0.01271501
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D3"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D3" unique_id=1012243192]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D3/StaticBody2D3" unique_id=1866207265]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=248411280]
 position = Vector2(-500, 700)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3" unique_id=408782669]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1660544517]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=905401909]
 position = Vector2(2400, 600)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5" unique_id=452228426]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_f2txt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1040430647]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D5"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D5" unique_id=1648240094]
 position = Vector2(1494, 37.800003)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D2"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D2" unique_id=1149900701]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_f2txt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D2" unique_id=56568527]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D5"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D5" unique_id=15573477]
 position = Vector2(1694, 137.79999)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D3"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D3" unique_id=1080980804]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D3" unique_id=2060585478]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D3"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D3" unique_id=700348855]
 position = Vector2(-534.5, 631.52)
 rotation = 0.01271501
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D2"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D2" unique_id=856087071]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_f2txt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D2" unique_id=440771915]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_1ainy")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D3"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D3" unique_id=1394918692]
 position = Vector2(-334.5, 731.52)
 rotation = 0.01271501
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D3"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D3" unique_id=2118162405]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D3/StaticBody2D3" unique_id=494150432]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=364305276]
 position = Vector2(2021, 692)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D6"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D6" unique_id=900526486]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=2083935839]
 position = Vector2(2.75, 12.099998)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=246572542]
 position = Vector2(2232, 1407)
 scale = Vector2(2, 5)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D7"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D7" unique_id=1258811201]
 position = Vector2(2.5999947, 12.049998)
 scale = Vector2(114.4, 4.1)
 mesh = SubResource("BoxMesh_n6hdu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1548677773]
 position = Vector2(2.75, 12.100006)
 shape = SubResource("RectangleShape2D_km5ld")
 
-[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=931432708]
 position = Vector2(12, 191)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D8"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D8" unique_id=203938089]
 position = Vector2(0, 2267)
 scale = Vector2(10000, 50)
 mesh = SubResource("BoxMesh_0b4ue")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=882442124]
 position = Vector2(8.392334e-05, 2267)
 scale = Vector2(50, 50)
 shape = SubResource("RectangleShape2D_f2txt")
