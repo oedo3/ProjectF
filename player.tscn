@@ -54,6 +54,7 @@ sprite_frames = SubResource("SpriteFrames_onrkg")
 animation = &"idle"
 
 [node name="FastFallIndicator" type="MeshInstance2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(-45, -56)
 scale = Vector2(20, 20)
 mesh = SubResource("SphereMesh_hqtel")

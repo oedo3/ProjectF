@@ -1,6 +1,7 @@
 extends MeshInstance2D
 
-@export var flash_time := 0.01
+@export var flash_time := 0.008
+var flashed := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,9 +13,11 @@ func _process(delta: float) -> void:
 	if player == null:
 		return
 	
-	# Fast fall indicator
-	if Input.is_action_just_pressed("down") and not player.is_on_floor():
-			flash()
+	if player.is_on_floor():
+		flashed = false
+	elif Input.is_action_just_pressed("down") and not flashed:
+		flashed = true
+		flash()
 			
 func flash():
 	visible = true
