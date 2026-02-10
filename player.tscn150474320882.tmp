@@ -45,9 +45,16 @@ mesh = SubResource("CapsuleMesh_onrkg")
 shape = SubResource("CapsuleShape2D_i3pqv")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=405555876]
+zoom = Vector2(0.5, 0.5)
 script = ExtResource("2_onrkg")
-look_ahead_distance = 1000.0
-min_y_offset = -500.0
+smoothing = null
+look_ahead_distance = null
+look_ahead_speed = null
+zoom_speed = null
+min_zoom = null
+max_zoom = null
+min_y_offset = null
+max_y_offset = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1705930297]
 sprite_frames = SubResource("SpriteFrames_onrkg")

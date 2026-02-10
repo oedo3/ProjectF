@@ -1,6 +1,6 @@
 extends MeshInstance2D
 
-@export var flash_time := 0.008
+@export var flash_time := 0.01
 var flashed := false
 
 # Called when the node enters the scene tree for the first time.

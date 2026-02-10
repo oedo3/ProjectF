@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://qvl8e0lief15"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1187808445]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1677019491]
+offset_left = -573.0
+offset_top = 117.0
+offset_right = -430.0
+offset_bottom = 322.0
+color = Color(0.4253181, 0.3591902, 0.26746133, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1469551450]
+offset_left = -429.0
+offset_top = 232.0
+offset_right = -119.0
+offset_bottom = 322.0
+color = Color(0.42352942, 0.36078432, 0.26666668, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=111410635]
+anchors_preset = -1
+anchor_left = -0.36631945
+anchor_top = 0.28549382
+anchor_right = -0.3315972
+anchor_bottom = 0.3472222
+offset_bottom = 1.5258789e-05
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.4535414, 0.24065763, 0.16588673, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1658259843]
+anchors_preset = -1
+anchor_left = -0.32291666
+anchor_top = 0.28549382
+anchor_right = -0.28819445
+anchor_bottom = 0.3472222
+offset_bottom = 1.5258789e-05
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.46233964, 0.17888042, 0.24943364, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1907211268]
+anchors_preset = -1
+anchor_left = -0.28038195
+anchor_top = 0.28549382
+anchor_right = -0.24565972
+anchor_bottom = 0.3472222
+offset_bottom = 1.5258789e-05
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.29671976, 0.22300369, 0.4728629, 1)
+metadata/_edit_use_anchors_ = true

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://gxtuca68v2ea" path="res://player.tscn" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://jwpvb7ri6gf8" path="res://level.tscn" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://qvl8e0lief15" path="res://hud.tscn" id="3_r0du0"]
 
 [node name="Main" type="Node" unique_id=172259873]
 
@@ -9,4 +10,4 @@
 
 [node name="Player" parent="." unique_id=1369691941 instance=ExtResource("1_glv2v")]
 
-[node name="Timer" type="Timer" parent="." unique_id=1815542859]
+[node name="HUD" parent="." unique_id=1187808445 instance=ExtResource("3_r0du0")]
