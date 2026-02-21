@@ -7,11 +7,11 @@ extends Camera2D
 
 # Zoom settings
 @export var zoom_speed := 0.1
-@export var min_zoom := 0.5
-@export var max_zoom := 2.0
+@export var min_zoom := 1
+@export var max_zoom := 2
 
 # Y shift range
-@export var min_y_offset := -300.0
+@export var min_y_offset := 0.0
 @export var max_y_offset := 0.0
 
 var target_offset := Vector2.ZERO
