@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://gxtuca68v2ea"]
 
 [ext_resource type="Script" uid="uid://deat4y62v5nwp" path="res://character_body_2d.gd" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://6safu1cis0lx" path="res://camera_2d.gd" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://clvudyf8h04x7" path="res://assets/art/idle_animation.png" id="3_2hs0m"]
 [ext_resource type="Script" uid="uid://d05dyq077to4v" path="res://fast_fall_indicator.gd" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://dp4sjfkpxw1lq" path="res://assets/art/jump_animation.png" id="3_sweqy"]
@@ -9,6 +8,22 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
+atlas = ExtResource("3_sweqy")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efrwb"]
+atlas = ExtResource("3_sweqy")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiqhm"]
+atlas = ExtResource("3_sweqy")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkwlq"]
+atlas = ExtResource("3_sweqy")
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dx0e4"]
 atlas = ExtResource("3_2hs0m")
@@ -114,6 +129,23 @@ region = Rect2(64, 128, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2hs0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efrwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiqhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkwlq")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_dx0e4")
 }, {
 "duration": 1.0,
@@ -212,30 +244,24 @@ animations = [{
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_onrkg"]
 
-[node name="Player" type="Node" unique_id=1134355778]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1967059036]
+[node name="Player" type="CharacterBody2D" unique_id=1967059036]
 script = ExtResource("1_4flbx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1414165195]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1414165195]
 shape = SubResource("RectangleShape2D_sweqy")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=405555876]
-script = ExtResource("2_onrkg")
-look_ahead_distance = 1000.0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1705930297]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1705930297]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_onrkg")
-animation = &"idle"
+animation = &"fall"
 
-[node name="FastFallIndicator" type="MeshInstance2D" parent="CharacterBody2D" unique_id=1648142003]
+[node name="FastFallIndicator" type="MeshInstance2D" parent="." unique_id=1648142003]
 visible = false
 position = Vector2(-45, -56)
 scale = Vector2(20, 20)
 mesh = SubResource("SphereMesh_hqtel")
 script = ExtResource("3_i3pqv")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="CharacterBody2D" unique_id=2021332695]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=2021332695]
 position = Vector2(550, 0)
 occluder = SubResource("OccluderPolygon2D_onrkg")

@@ -3,11 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://gxtuca68v2ea" path="res://player.tscn" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://jwpvb7ri6gf8" path="res://level.tscn" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://qvl8e0lief15" path="res://hud.tscn" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bc4gw2el2h7mf" path="res://camera_2d.tscn" id="4_cm0pq"]
 
 [node name="Main" type="Node" unique_id=172259873]
 
+[node name="Camera2D" parent="." unique_id=1405916483 node_paths=PackedStringArray("player_body") instance=ExtResource("4_cm0pq")]
+position_smoothing_enabled = true
+player_body = NodePath("../Player")
+
 [node name="Level" parent="." unique_id=1815611890 instance=ExtResource("1_uu6xs")]
 
-[node name="Player" parent="." unique_id=1369691941 instance=ExtResource("1_glv2v")]
+[node name="Player" parent="." unique_id=1134355778 instance=ExtResource("1_glv2v")]
 
 [node name="HUD" parent="." unique_id=1187808445 instance=ExtResource("3_r0du0")]
