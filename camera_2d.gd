@@ -4,8 +4,9 @@ extends Camera2D
 
 #Camera Movment with player movment settings
 @export var smoothing := 2.5
-@export var look_ahead_distance := 800.0
-@export var look_ahead_speed := 2.0
+@export var look_ahead_distance := 1200.0
+@export var look_ahead_speed := 1.5
+
 
 # Zoom settings
 @export var zoom_speed := 0.1
@@ -14,9 +15,9 @@ extends Camera2D
 
 # Y shift range
 @export var min_y_offset := 0.0
-@export var max_y_offset := 0.0
+@export var max_y_offset := -200.0
 
-var target_offset := Vector2.ZERO
+var target_offset := Vector2.ZERO	
 #var target_zoom := Vector2.ONE
 
 func _ready():
